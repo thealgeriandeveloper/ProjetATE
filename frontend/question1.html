@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Que feriez-vous ?</h1>
+      <div class="image-container">
+        <img
+          src="images/question1.png"
+          alt="Illustration de la question 1"
+          class="question-image"
+        />
+      </div>
+      <p class="question-text">
+        Un enseignant en chimie corrige la dissertation d'un étudiant dont la
+        qualité dépasse largement celle des travaux précédents. Le texte est
+        écrit avec une qualité de langue avancée et non-uniforme à ses
+        dissertations précédentes. Par ailleurs, l’étudiant emploie des
+        références difficiles à analyser pour un étudiant au premier cycle. Que
+        feriez-vous ?
+      </p>
+      <div class="button-container">
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez qu\'il y a une infraction académique')"
+        >
+          Vous pensez qu'il y a une infraction académique
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez que l\'étudiant est en règle')"
+        >
+          Vous pensez que l'étudiant est en règle
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function makeChoice(option) {
+        fetch("/api/choice", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            choice: option,
+            question:
+              "Question 1",
+          }),
+        }).then(() => {
+          window.location.href = "question1.1.html"; // Redirection vers la question suivante
+        });
+      }
+    </script>
+  </body>
+</html>

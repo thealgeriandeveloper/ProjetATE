@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 1.2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Que feriez-vous ?</h1>
+      <div class="image-container">
+        <img
+          src="images/question1.png"
+          alt="Illustration de la question 1.2"
+          class="question-image"
+        />
+      </div>
+      <p class="question-text">
+        Un enseignant en chimie corrige la dissertation d'un étudiant dont la
+        qualité dépasse largement celle des travaux précédents. Le texte est
+        écrit avec une qualité de langue avancée et non-uniforme à ses
+        dissertations précédentes. Par ailleurs, l’étudiant emploie des
+        références difficiles à analyser pour un étudiant au premier cycle. De
+        plus, il emploie des concepts qui n'ont pas été abordés en classe.
+        Soupçonneux, l'enseignant invite l'étudiant à une discussion pour
+        approfondir certains points de l'essai. L'étudiant a du mal à expliquer
+        les idées présentées et admet avoir en fait : « utiliser le tuteur
+        automatisé pour "améliorer" mon texte, je lui ai donné une version
+        complète de mon rapport en lui demandant de mieux le reformuler ».
+        <br /><br />
+        Mais cette fois : L’étudiant soumet la version originale de son texte et
+        a aussi remis la discussion originale qu’il a eue avec son tuteur
+        automatisé. L’enseignant confirme effectivement que l’étudiant a bien
+        produit un travail initial.
+        <br /><br />
+        De plus, l’enseignant, en analysant le travail original (soumis au
+        tuteur automatisé), conclut qu’il aurait valu une excellente note.
+      </p>
+      <div class="button-container">
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez qu\'il y a une infraction académique')"
+        >
+          Vous pensez qu'il y a une infraction académique
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez que l\'étudiant est en règle')"
+        >
+          Vous pensez que l'étudiant est en règle
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function makeChoice(option) {
+        fetch("/api/choice", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            choice: option,
+            question:
+              "Question 1.2",
+          }),
+        }).then(() => {
+          window.location.href = "merci.html"; // Redirection vers la page finale ou une autre question
+        });
+      }
+    </script>
+  </body>
+</html>
