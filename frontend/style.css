@@ -4,6 +4,7 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  padding-bottom: 50px; /* Espace entre le contenu et la fin de la page */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,34 +24,45 @@ h1 {
 }
 
 .question-image {
-  max-width: 80%;
-  height: auto;
-  border: 2px solid #000;
+  width: 1000px; /* Largeur fixe pour l'image */
+  height: auto; /* Garde les proportions correctes */
+  margin: 10px auto; /* Centre l'image */
+  border: 2px solid #000; /* Bordure noire */
+  display: block; /* Centre l'image */
 }
 
 .question-text {
-  font-size: 1.2rem;
-  margin: 20px 0;
-  line-height: 1.5;
-  color: #000;
+  font-size: 1.5rem; /* Taille de la police */
+  font-weight: bold; /* Gras */
+  font-family: "Patrick Hand", cursive; /* Police manuscrite */
+  line-height: 1.6; /* Espacement entre les lignes */
+  color: #333; /* Couleur du texte */
+  width: 1000px; /* Même largeur que l'image */
+  margin: 10px auto; /* Centre le texte */
+  text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
 }
 
+/* Chargement de la police depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
 .button-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex; /* Affiche les boutons côte à côte */
+  justify-content: center; /* Centre les boutons horizontalement */
+  gap: 30px; /* Espace entre les boutons */
+  margin-bottom: 50px; /* Espace sous les boutons */
 }
 
 .choice-button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+  font-size: 1.2rem; /* Taille de la police augmentée */
+  padding: 15px 30px; /* Augmente l'espace interne des boutons */
+  background-color: #000; /* Fond noir */
+  color: #fff; /* Texte blanc */
+  border: none; /* Pas de bordure */
+  border-radius: 25px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointeur */
   transition: background-color 0.3s ease;
 }
 
 .choice-button:hover {
-  background-color: #555;
+  background-color: #444; /* Changement de couleur au survol */
 }
