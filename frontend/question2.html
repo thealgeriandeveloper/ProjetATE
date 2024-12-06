@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 1</title>
+    <title>Question 2</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,18 +11,24 @@
       <h1>Que feriez-vous ?</h1>
       <div class="image-container">
         <img
-          src="images/question1.png"
-          alt="Illustration de la question 1"
+          src="images/question2.png"
+          alt="Illustration de la question 2"
           class="question-image"
         />
       </div>
       <p class="question-text">
-        Un enseignant en chimie corrige la dissertation d'un étudiant dont la
-        qualité dépasse largement celle des travaux précédents. Le texte est
-        écrit avec une qualité de langue avancée et non-uniforme à ses
-        dissertations précédentes. Par ailleurs, l’étudiant emploie des
-        références difficiles à analyser pour un étudiant au premier cycle. Que
-        feriez-vous ?
+        Une enseignante en physique reçoit un rapport de laboratoire où les
+        données expérimentales présentées par un étudiant semblent incohérentes
+        avec les conditions réelles du laboratoire. En vérifiant, elle découvre
+        que l'étudiant a utilisé un tuteur automatisé pour générer des données
+        fictives au lieu de réaliser l'expérience lui-même. Lors de l'entretien,
+        l'étudiant explique qu'il manquait de temps et a pensé que simuler les
+        résultats serait acceptable.
+        <br /><br />
+        L’enseignante ne remarque d’ailleurs aucune autre utilisation inadéquate
+        d’intelligence artificielle. Tout semble indiquer que les calculs, les
+        analyses et la discussion ont été rédigés par l’étudiant et que la seule
+        utilisation inadéquate est d’avoir généré des données fictives.
       </p>
       <div class="button-container">
         <button
@@ -49,10 +55,10 @@
           },
           body: JSON.stringify({
             choice: option,
-            question: "Question 1",
+            question: "Question 2",
           }),
         }).then(() => {
-          window.location.href = "question1.1.html"; // Redirection vers la question suivante
+          window.location.href = "merci.html"; // Redirection vers la page finale ou une autre question
         });
       }
     </script>
