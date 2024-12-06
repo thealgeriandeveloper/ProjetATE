@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 2</title>
+    <title>Question 3</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,24 +11,20 @@
       <h1>Que feriez-vous ?</h1>
       <div class="image-container">
         <img
-          src="images/question2.png"
-          alt="Illustration de la question 2"
+          src="images/question3.png"
+          alt="Illustration de la question 3"
           class="question-image"
         />
       </div>
       <p class="question-text">
-        Une enseignante en physique reçoit un rapport de laboratoire où les
-        données expérimentales présentées par un étudiant semblent incohérentes
-        avec les conditions réelles du laboratoire. En vérifiant, elle découvre
-        que l'étudiant a utilisé un tuteur automatisé pour générer des données
-        fictives au lieu de réaliser l'expérience lui-même. Lors de l'entretien,
-        l'étudiant explique qu'il manquait de temps et a pensé que simuler les
-        résultats serait acceptable.
+        L’étudiant est en situation d’examen, il a le droit à toute
+        documentation en ligne incluant l’utilisation des moteurs de recherche
+        tels que Google pour un examen de programmation. En effectuant une
+        recherche pour trouver un pseudo-code en JavaScript, il remarque que
+        Google lui produit une réponse générative.
         <br /><br />
-        L’enseignante ne remarque d’ailleurs aucune autre utilisation inadéquate
-        d’intelligence artificielle. Tout semble indiquer que les calculs, les
-        analyses et la discussion ont été rédigés par l’étudiant et que la seule
-        utilisation inadéquate est d’avoir généré des données fictives.
+        Il considère qu’il a le droit de saisir ce code car il s’agit d’un
+        résultat produit par une requête sur un moteur de recherche.
       </p>
       <div class="button-container">
         <button
@@ -55,10 +51,11 @@
           },
           body: JSON.stringify({
             choice: option,
-            question: "Question 2",
+            question:
+              "Question 3",
           }),
         }).then(() => {
-          window.location.href = "question3.html"; // Redirection vers la page finale ou une autre question
+          window.location.href = "merci.html"; // Redirection vers la page finale ou une autre question
         });
       }
     </script>
