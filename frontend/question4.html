@@ -43,6 +43,13 @@
         >
           Vous pensez que l'étudiant est en règle
         </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('L\'étudiant n\'a pas commis d\'infraction, mais sa façon d\'utiliser l\'IA n\'est pas bénéfique pour son apprentissage')"
+        >
+          L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser l'IA
+          n'est pas bénéfique pour son apprentissage
+        </button>
       </div>
     </div>
 
@@ -55,8 +62,7 @@
           },
           body: JSON.stringify({
             choice: option,
-            question:
-              "Question 4",
+            question: "Question 4",
           }),
         }).then(() => {
           window.location.href = "question5.html"; // Redirection vers la page finale ou une autre question

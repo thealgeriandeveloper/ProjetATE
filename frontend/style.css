@@ -47,14 +47,15 @@ h1 {
 
 .button-container {
   display: flex; /* Affiche les boutons côte à côte */
+  flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
   justify-content: center; /* Centre les boutons horizontalement */
-  gap: 30px; /* Espace entre les boutons */
+  gap: 20px; /* Espace entre les boutons */
   margin-bottom: 50px; /* Espace sous les boutons */
 }
 
 .choice-button {
-  font-size: 1.2rem; /* Taille de la police augmentée */
-  padding: 15px 30px; /* Augmente l'espace interne des boutons */
+  font-size: 1.2rem; /* Taille de la police */
+  padding: 15px 30px; /* Espace interne des boutons */
   background-color: #000; /* Fond noir */
   color: #fff; /* Texte blanc */
   border: none; /* Pas de bordure */
