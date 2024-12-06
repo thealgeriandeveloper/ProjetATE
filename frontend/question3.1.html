@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 3</title>
+    <title>Question 3.1</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,7 +12,7 @@
       <div class="image-container">
         <img
           src="images/question3.png"
-          alt="Illustration de la question 3"
+          alt="Illustration de la question 3.1"
           class="question-image"
         />
       </div>
@@ -23,8 +23,10 @@
         recherche pour trouver un pseudo-code en JavaScript, il remarque que
         Google lui produit une réponse générative.
         <br /><br />
-        Il considère qu’il a le droit de saisir ce code car il s’agit d’un
-        résultat produit par une requête sur un moteur de recherche.
+        L’étudiant vient de comprendre que cette réponse est produite par une
+        intelligence artificielle (Google Assistant AI). L’étudiant n’était pas
+        au courant de cette fonctionnalité. Ayant été exposé à la réponse, il
+        finit par prendre ce que Google lui a généré.
       </p>
       <div class="button-container">
         <button
@@ -51,11 +53,10 @@
           },
           body: JSON.stringify({
             choice: option,
-            question:
-              "Question 3",
+            question: "Question 3.1",
           }),
         }).then(() => {
-          window.location.href = "question3.1.html"; // Redirection vers la page finale ou une autre question
+          window.location.href = "merci.html"; // Redirection vers la page finale ou une autre question
         });
       }
     </script>
