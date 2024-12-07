@@ -1,6 +1,6 @@
 /* Style global */
 body {
-  font-family: "Patrick Hand", cursive; /* Police manuscrite */
+  font-family: Arial, sans-serif; /* Police Arial */
   background-color: #f9f9f9;
   color: #333;
   margin: 0;
@@ -99,7 +99,7 @@ h1 {
 .question-text {
   font-size: 1.5rem; /* Taille de la police */
   font-weight: bold;
-  font-family: "Patrick Hand", cursive;
+  font-family: Arial, sans-serif; /* Police Arial */
   line-height: 1.6;
   color: #333;
   width: 1000px;
