@@ -156,7 +156,29 @@ h1 {
 .scenarios-container {
   margin-bottom: 50px;
 }
+.choice-button.green {
+  background-color: #28a745; /* Vert */
+}
 
+.choice-button.green:hover {
+  background-color: #218838; /* Vert foncé au survol */
+}
+
+.choice-button.red {
+  background-color: #dc3545; /* Rouge */
+}
+
+.choice-button.red:hover {
+  background-color: #c82333; /* Rouge foncé au survol */
+}
+
+.choice-button.black {
+  background-color: #000; /* Noir */
+}
+
+.choice-button.black:hover {
+  background-color: #444; /* Noir plus clair au survol */
+}
 /* Espacement en bas de la page */
 body {
   padding-bottom: 50px; /* Espace entre le contenu et la fin de la page */
