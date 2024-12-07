@@ -179,6 +179,40 @@ h1 {
 .choice-button.black:hover {
   background-color: #444; /* Noir plus clair au survol */
 }
+/* Images des profils */
+.profil-image {
+  width: 500px; /* Taille fixe des images */
+  height: auto; /* Garde les proportions */
+  margin: 10px auto; /* Centre l'image */
+  display: block; /* Image sur sa propre ligne */
+}
+
+/* Section des profils */
+.profil-section {
+  margin-bottom: 20px; /* Espacement entre les sections */
+}
+
+/* Ligne de séparation entre les sections */
+hr {
+  border: none; /* Pas de bordure par défaut */
+  border-top: 1px solid #ccc; /* Ligne grise */
+  margin: 20px 0; /* Espacement autour de la ligne */
+}
+.profil-title.red {
+  color: red;
+}
+
+.profil-title.orange {
+  color: orange;
+}
+
+.profil-title.green {
+  color: green;
+}
+
+.profil-title.blue {
+  color: blue;
+}
 /* Espacement en bas de la page */
 body {
   padding-bottom: 50px; /* Espace entre le contenu et la fin de la page */
