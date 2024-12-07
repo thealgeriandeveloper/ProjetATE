@@ -9,7 +9,7 @@ const PORT = 3000;
 // Middleware : servir les fichiers statiques depuis "frontend"
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Route principale : redirection vers question1.html
+// Route principale : redirection vers index.html
 app.get("/", (req, res) => {
   res.redirect("/index.html");
 });
@@ -23,7 +23,9 @@ const csvWriter = createObjectCsvWriter({
     { id: "timestamp", title: "Horodatage" },
   ],
 });
+
 app.use(express.json());
+
 // API pour enregistrer les réponses
 app.post("/api/choice", async (req, res) => {
   const { question, choice } = req.body;
@@ -35,6 +37,23 @@ app.post("/api/choice", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Erreur lors de la sauvegarde." });
+  }
+});
+
+// Route pour télécharger le fichier CSV
+app.get("/download-csv", (req, res) => {
+  const csvFilePath = path.join(__dirname, "decisions.csv");
+
+  // Vérifier si le fichier existe
+  if (fs.existsSync(csvFilePath)) {
+    res.download(csvFilePath, "responses.csv", (err) => {
+      if (err) {
+        console.error("Erreur lors du téléchargement :", err);
+        res.status(500).send("Erreur lors du téléchargement.");
+      }
+    });
+  } else {
+    res.status(404).send("Fichier CSV introuvable.");
   }
 });
 

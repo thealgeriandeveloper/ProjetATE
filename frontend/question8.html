@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 8</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Niveau 8</h1>
+      <div class="image-container">
+        <img
+          src="images/question4.png"
+          alt="Illustration de la question 8"
+          class="question-image"
+        />
+      </div>
+      <p class="question-text">
+        Un étudiant rédige lui-même l’intégralité d’un rapport en physique. Une
+        fois le corps du texte complété, il souhaite y intégrer des références
+        pour soutenir ses arguments. <br /><br />Pour ce faire, il utilise son
+        tuteur automatisé en lui fournissant la version finale de son rapport,
+        et lui demande d’identifier des références pertinentes en ligne.
+        <br /><br />Après environ deux minutes, le tuteur automatisé renvoie une
+        version « enrichie » du même rapport, incluant des références insérées
+        selon les normes APA (Auteur, Année : YYYY). <br /><br />Lors de la
+        correction, l’enseignante vérifie au hasard l’une des sources citées.
+        Elle découvre avec étonnement que l’article référencé, censé étayer un
+        concept en physique, traite en réalité de l’histoire de l’art dans la
+        Rome antique, donc sans aucun lien avec le contenu du rapport.
+        <br /><br />Convoqué pour s’expliquer, l’étudiant reconnaît avoir
+        utilisé le tuteur automatisé pour générer les références. Il précise
+        avoir vérifié certaines sources de façon superficielle, sans s’assurer
+        de la pertinence de chacune d’entre elles. L’étudiant admet qu’il aurait
+        dû procéder à une vérification plus rigoureuse de l’ensemble des
+        références proposées.
+      </p>
+      <div class="button-container">
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez qu\'il y a une infraction académique')"
+        >
+          Vous pensez qu'il y a une infraction académique
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez que l\'étudiant est en règle')"
+        >
+          Vous pensez que l'étudiant est en règle
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('L\'étudiant n\'a pas commis d\'infraction, mais sa façon d\'utiliser l\'IA n\'est pas bénéfique pour son apprentissage')"
+        >
+          L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser l'IA
+          n'est pas bénéfique pour son apprentissage
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function makeChoice(option) {
+        fetch("/api/choice", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            choice: option,
+            question: "Question 8",
+          }),
+        }).then(() => {
+          window.location.href = "question8.1.html"; // Redirection vers la page finale ou une autre question
+        });
+      }
+    </script>
+  </body>
+</html>

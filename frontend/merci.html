@@ -5,11 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Merci</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Styles spécifiques à la page "Merci" */
+      #app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Occupe toute la hauteur de la fenêtre */
+        text-align: center;
+      }
+      h1 {
+        font-family: "Patrick Hand", cursive;
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      p {
+        font-family: "Patrick Hand", cursive;
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .download-button {
+        font-family: "Patrick Hand", cursive;
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        color: #fff;
+        background-color: #000; /* Fond noir */
+        border: none;
+        border-radius: 25px; /* Boutons arrondis */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .download-button:hover {
+        background-color: #333; /* Noir plus clair au survol */
+      }
+    </style>
   </head>
   <body>
     <div id="app">
       <h1>Merci d'avoir répondu à toutes les questions !</h1>
       <p>Vos réponses ont été enregistrées avec succès.</p>
+      <button
+        class="download-button"
+        onclick="window.location.href='/download-csv'"
+      >
+        Télécharger vos résultats
+      </button>
     </div>
   </body>
 </html>

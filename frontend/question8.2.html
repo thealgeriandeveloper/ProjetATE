@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 8.2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Niveau 8.2</h1>
+      <div class="image-container">
+        <img
+          src="images/question4.png"
+          alt="Illustration de la question 8.2"
+          class="question-image"
+        />
+      </div>
+      <p class="question-text">
+        Un autre étudiant rédige entièrement et de façon autonome son rapport,
+        incluant des références sélectionnées et positionnées adéquatement. Par
+        la suite, il souhaite améliorer la qualité linguistique et la cohérence
+        de son texte, et demande à son tuteur automatisé d’effectuer une
+        révision stylistique et orthographique. Le TA renvoie alors un rapport
+        corrigé sur le plan de la langue. <br /><br />Toutefois, l’une des
+        conséquences imprévues de cette révision est que le tuteur automatisé a
+        accidentellement déplacé certaines références dans le texte. Sans s’en
+        apercevoir, l’étudiant soumet son rapport dans cet état. L’enseignant,
+        en le corrigeant, s’aperçoit que certaines références ne sont plus
+        correctement associées aux passages qu’elles étaient censées appuyer.
+        L’étudiant, convoqué pour s’expliquer, déclare ne pas avoir remarqué ces
+        déplacements, car il faisait confiance au tuteur automatisé pour la
+        seule correction linguistique.
+      </p>
+      <div class="button-container">
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez qu\'il y a une infraction académique')"
+        >
+          Vous pensez qu'il y a une infraction académique
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez que l\'étudiant est en règle')"
+        >
+          Vous pensez que l'étudiant est en règle
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('L\'étudiant n\'a pas commis d\'infraction, mais sa façon d\'utiliser l\'IA n\'est pas bénéfique pour son apprentissage')"
+        >
+          L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser l'IA
+          n'est pas bénéfique pour son apprentissage
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function makeChoice(option) {
+        fetch("/api/choice", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            choice: option,
+            question: "Question 8.2",
+          }),
+        }).then(() => {
+          window.location.href = "merci.html"; // Redirection vers la page finale ou une autre question
+        });
+      }
+    </script>
+  </body>
+</html>

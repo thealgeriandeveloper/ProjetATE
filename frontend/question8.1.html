@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 8.1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Niveau 8.1</h1>
+      <div class="image-container">
+        <img
+          src="images/question4.png"
+          alt="Illustration de la question 8.1"
+          class="question-image"
+        />
+      </div>
+      <p class="question-text">
+        Un étudiant, après avoir rédigé lui-même l’intégralité de son rapport,
+        souhaite intégrer des références pour soutenir son analyse. Il utilise
+        cette fois-ci une approche différente : il commence par fournir au
+        tuteur automatisé une liste de références qu’il a préalablement
+        sélectionnées, puis lui demande d’analyser son rapport et d’insérer
+        lesdites références aux endroits appropriés dans le texte.
+        <br /><br />Lors de la correction, l’enseignant remarque qu’une source,
+        bien que valable sur le plan scientifique, ne correspond pas au passage
+        auquel elle est rattachée. Pour illustration, le passage concerné
+        présente la formule de Bernoulli en mécanique des fluides : <br /><br />
+        « La mécanique des fluides, selon le principe de Bernoulli, décrit le
+        comportement d'un fluide incompressible et sans viscosité en mouvement,
+        en établissant une relation entre sa vitesse, sa pression, et son
+        altitude. La formule de Bernoulli exprime la conservation de l'énergie
+        le long d'une ligne de courant, indiquant que la somme de l'énergie
+        cinétique, de l'énergie potentielle, et de l'énergie de pression reste
+        constante (Hoang, 2018). » <br /><br />Intriguée, l’enseignante
+        questionne l’étudiant sur la pertinence de cette référence. L’étudiant
+        avoue avoir simplement confié le soin au tuteur automatisé de
+        positionner les références sans ensuite vérifier si elles
+        correspondaient réellement au contenu du passage.
+      </p>
+      <div class="button-container">
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez qu\'il y a une infraction académique')"
+        >
+          Vous pensez qu'il y a une infraction académique
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('Vous pensez que l\'étudiant est en règle')"
+        >
+          Vous pensez que l'étudiant est en règle
+        </button>
+        <button
+          class="choice-button"
+          onclick="makeChoice('L\'étudiant n\'a pas commis d\'infraction, mais sa façon d\'utiliser l\'IA n\'est pas bénéfique pour son apprentissage')"
+        >
+          L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser l'IA
+          n'est pas bénéfique pour son apprentissage
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function makeChoice(option) {
+        fetch("/api/choice", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            choice: option,
+            question: "Question 8.1",
+          }),
+        }).then(() => {
+          window.location.href = "question8.2.html"; // Redirection vers la page finale ou une autre question
+        });
+      }
+    </script>
+  </body>
+</html>
