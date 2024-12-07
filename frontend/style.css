@@ -1,58 +1,113 @@
+/* Style global */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  font-family: "Patrick Hand", cursive; /* Police manuscrite */
+  background-color: #f9f9f9;
   color: #333;
   margin: 0;
-  padding: 0;
-  padding-bottom: 50px; /* Espace entre le contenu et la fin de la page */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  flex-direction: column;
-  text-align: center;
+  padding: 20px;
+  line-height: 1.8;
 }
 
+/* Titre principal */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #000;
+  text-align: center;
+  font-weight: bold;
 }
 
-.image-container {
-  margin: 20px 0;
+/* Conteneur d'introduction */
+.introduction {
+  max-width: 800px; /* Limite la largeur du contenu */
+  margin: 0 auto; /* Centre le contenu */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute un effet d'ombre */
+  text-align: justify; /* Aligne le texte en justifié */
 }
 
+.introduction p {
+  margin-bottom: 15px;
+}
+
+.introduction ul,
+.introduction ol {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.introduction strong {
+  font-weight: bold; /* Accentue les parties importantes */
+}
+
+/* Conteneur pour les profils */
+.profils-container {
+  max-width: 800px; /* Limite la largeur du contenu */
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajoute un effet d'ombre */
+}
+
+.profils-container ol {
+  padding-left: 20px;
+}
+
+.profils-container li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.profils-container p {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.profils-container span {
+  font-weight: bold;
+}
+
+/* Couleurs spécifiques pour les profils */
+.profils-container li:nth-child(1) span {
+  color: red; /* Rouge pour le profil passif */
+}
+
+.profils-container li:nth-child(2) span {
+  color: orange; /* Orange pour le profil réactif */
+}
+
+.profils-container li:nth-child(3) span {
+  color: green; /* Vert pour le profil collaboratif */
+}
+
+.profils-container li:nth-child(4) span {
+  color: blue; /* Bleu pour le profil proactif */
+}
+
+/* Style pour les images */
 .question-image {
-  width: 1000px; /* Largeur fixe pour l'image */
+  width: 1000px; /* Taille fixe pour l'image */
   height: auto; /* Garde les proportions correctes */
-  margin: 10px auto; /* Centre l'image */
+  margin: 10px auto; /* Centre l'image avec un espace autour */
   border: 2px solid #000; /* Bordure noire */
   display: block; /* Centre l'image */
 }
 
+/* Texte des questions */
 .question-text {
   font-size: 1.5rem; /* Taille de la police */
-  font-weight: bold; /* Gras */
-  font-family: "Patrick Hand", cursive; /* Police manuscrite */
-  line-height: 1.6; /* Espacement entre les lignes */
-  color: #333; /* Couleur du texte */
-  width: 1000px; /* Même largeur que l'image */
-  margin: 10px auto; /* Centre le texte */
-  text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
+  font-weight: bold;
+  font-family: "Patrick Hand", cursive;
+  line-height: 1.6;
+  color: #333;
+  width: 1000px;
+  margin: 10px auto;
+  text-align: justify;
 }
 
-/* Chargement de la police depuis Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
-.button-container {
-  display: flex; /* Affiche les boutons côte à côte */
-  flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
-  justify-content: center; /* Centre les boutons horizontalement */
-  gap: 20px; /* Espace entre les boutons */
-  margin-bottom: 50px; /* Espace sous les boutons */
-}
-
+/* Boutons */
 .choice-button {
   font-size: 1.2rem; /* Taille de la police */
   padding: 15px 30px; /* Espace interne des boutons */
@@ -67,3 +122,45 @@ h1 {
 .choice-button:hover {
   background-color: #444; /* Changement de couleur au survol */
 }
+/* Bouton sélectionné */
+.choice-button.selected {
+  background-color: #555; /* Couleur grise pour indiquer la sélection */
+  color: #fff; /* Texte en blanc */
+  border: 2px solid #000; /* Bordure pour démarquer */
+}
+
+/* Conteneur des boutons */
+.button-container {
+  display: flex; /* Affiche les boutons côte à côte */
+  flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
+  justify-content: center; /* Centre les boutons horizontalement */
+  gap: 20px; /* Espace entre les boutons */
+  margin-bottom: 50px; /* Espace sous les boutons */
+}
+.scenario-box {
+  max-width: 800px; /* Limite la largeur totale du conteneur */
+  margin: 20px auto; /* Espacement extérieur entre les scénarios */
+  background-color: #fff; /* Couleur de fond blanche */
+  padding: 20px; /* Espacement intérieur pour le texte */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+  text-align: justify; /* Justifie le texte */
+  overflow-wrap: break-word; /* Force le retour à la ligne pour éviter le débordement */
+}
+.scenario-box .question-text {
+  max-width: 100%; /* Le texte ne dépasse pas la largeur du conteneur */
+  margin: 0; /* Évite les marges additionnelles */
+}
+
+/* Espacement entre les scénarios */
+.scenarios-container {
+  margin-bottom: 50px;
+}
+
+/* Espacement en bas de la page */
+body {
+  padding-bottom: 50px; /* Espace entre le contenu et la fin de la page */
+}
+
+/* Chargement de la police depuis Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");

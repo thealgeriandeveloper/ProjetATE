@@ -3,31 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 1</title>
+    <title>Question 7</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Niveau 1</h1>
+      <h1>Niveau 7</h1>
       <div class="image-container">
         <img
-          src="images/question1.png"
-          alt="Illustration de la question 1"
+          src="images/question3.png"
+          alt="Illustration de la question 7"
           class="question-image"
         />
       </div>
-      <p class="question-text"><br>
-        Un enseignant en chimie corrige la dissertation d'un étudiant dont la
-        qualité dépasse largement celle de ses travaux précédents. Le texte est
-        rédigé avec une maîtrise linguistique avancée, contrastant avec ses
-        dissertations antérieures. De plus, l'étudiant utilise des références
-        complexes, difficiles à analyser pour un étudiant de premier cycle, et
-        introduit des concepts qui n'ont pas été abordés en classe. Soupçonneux,
-        l'enseignant invite l'étudiant à une discussion pour approfondir
-        certains points de l'essai. L'étudiant a du mal à expliquer les idées
-        présentées et admet finalement : </br>« J'ai utilisé un tuteur automatisé
-        pour améliorer mon texte. Je lui ai fourni une version complète de mon
-        rapport en lui demandant de le reformuler pour qu'il soit meilleur. »
+      <p class="question-text">
+        Un étudiant doit rédiger un rapport en équipe. Il est établi que tout ce
+        qu'il a produit jusqu'à présent est le fruit de ses efforts personnels.
+        <br /><br />Cependant, il utilise un tuteur automatisé pour comprendre
+        une notion qu'il a du mal à saisir. En lisant la réponse du TA, il
+        remarque qu'elle est identique à un passage rédigé par son coéquipier.
+        <br /><br />À la date de remise, il soumet le travail en signant son
+        nom, en considérant qu’il n’a lui-même commis aucune utilisation
+        inappropriée d'un système d'IA.
       </p>
       <div class="button-container">
         <button
@@ -61,10 +58,10 @@
           },
           body: JSON.stringify({
             choice: option,
-            question: "Question 1",
+            question: "Question 7",
           }),
         }).then(() => {
-          window.location.href = "question1.1.html"; // Redirection vers la question suivante
+          window.location.href = "question7.1.html"; // Redirection vers la page finale ou une autre question
         });
       }
     </script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Annonce d’introduction pour le jeu-questionnaire !</h1>
+      <div class="introduction">
+        <p>
+          <strong>A.</strong> Bienvenue dans ce jeu-questionnaire inspiré de la
+          formation ATE sur l’intégrité intellectuelle. Depuis la mise en place
+          du cours ATE100 « Intégrité intellectuelle : un savoir-être et un
+          savoir-faire », les étudiants sont sensibilisés aux enjeux du plagiat
+          et des manquements à l’intégrité académique. Cependant, l’émergence
+          rapide des outils d’intelligence artificielle, notamment les tuteurs
+          automatisés (TA), complexifie davantage la notion d’intégrité
+          intellectuelle en contexte d’évaluation.
+        </p>
+        <p>
+          <strong>B.</strong> Ce jeu s’adresse principalement aux étudiants qui
+          n’ont pas encore suivi la nouvelle version du cours ATE ou qui ont
+          suivi l’ancien bloc ATE100. L’objectif est de recueillir des données
+          sur votre perception des enjeux liés à l’utilisation des TA, afin
+          d’aider les concepteurs de la formation à mieux comprendre comment les
+          étudiants perçoivent l’usage de l’IA dans les travaux, devoirs,
+          laboratoires et évaluations notées.
+        </p>
+        <p>
+          <strong>C.</strong> Le jeu se présente sous forme de scénarios où un
+          étudiant utilise un tuteur automatisé dans différentes situations.
+          Avant de répondre :
+        </p>
+        <ul>
+          <li>
+            <strong>a.</strong> Vous aurez la possibilité de prendre
+            connaissance de quatre profils types d’utilisation des TA (<strong
+              >passif, réactif, collaboratif, proactif</strong
+            >). Bien que la consultation de ces profils ne soit pas obligatoire,
+            elle peut orienter votre intuition.
+          </li>
+          <li>
+            <strong>b.</strong> Votre rôle sera de lire chaque scénario et de
+            choisir l’une des trois réponses proposées, en vous fondant sur vos
+            idées préconçues sans consulter les règlements académiques :
+          </li>
+        </ul>
+        <ol>
+          <li>
+            <strong>L’étudiant a commis une infraction académique.</strong>
+          </li>
+          <li><strong>L’étudiant est en règle.</strong></li>
+          <li>
+            <strong
+              >L’étudiant n’a pas commis d’infraction, mais sa façon d’utiliser
+              l’IA n’est pas bénéfique pour son apprentissage.</strong
+            >
+          </li>
+        </ol>
+        <p>
+          Vos réponses aideront à comprendre les zones grises et les points
+          d’incompréhension liés à l’utilisation des outils d’IA en milieu
+          académique, afin de renforcer la sensibilisation et d’élaborer des
+          directives plus claires. Ce faisant, vous contribuerez à enrichir le
+          futur bloc complémentaire de la formation ATE sur les normes
+          académiques entourant l’usage de l’IA à l’école.
+        </p>
+      </div>
+      <div class="button-container">
+        <button class="choice-button" onclick="startQuiz()">Continuer</button>
+      </div>
+    </div>
+
+    <script>
+      function startQuiz() {
+        window.location.href = "4profils.html"; // Redirige vers la première question
+      }
+    </script>
+  </body>
+</html>

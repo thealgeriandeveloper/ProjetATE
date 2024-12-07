@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutoriel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      // Fonction pour gérer la sélection d'un bouton
+      function selectAnswer(button) {
+        // Réinitialiser les boutons pour ce conteneur
+        const buttons = button.parentElement.querySelectorAll(".choice-button");
+        buttons.forEach((btn) => {
+          btn.classList.remove("selected");
+        });
+
+        // Ajouter la classe "selected" au bouton cliqué
+        button.classList.add("selected");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>
+        Pour vous mettre en contexte, débutons avec quelques courts scénarios !
+      </h1>
+      <div class="scenarios-container">
+        <!-- Scénario Test-1 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1 :</h2>
+          <p class="question-text">
+            Un étudiant, peu à l’aise avec les mathématiques, doit compléter un
+            devoir en ligne sur Moodle. Ayant récemment découvert un tuteur
+            automatisé gratuit, il décide de l’utiliser pour résoudre toutes les
+            questions du devoir. L’étudiant copie les réponses directement dans
+            Moodle sans chercher à comprendre les explications fournies.
+            Lorsqu’un enseignant l’interroge plus tard sur les solutions, il est
+            incapable d’expliquer son raisonnement.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Scénario Test-1.1 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1.1 :</h2>
+          <p class="question-text">
+            Un étudiant réalise un devoir de mathématiques sur Moodle. Conscient
+            de ses lacunes, il tente de résoudre toutes les questions par
+            lui-même. Cependant, il se heurte à deux questions qu’il ne comprend
+            pas du tout. Il utilise alors un tuteur automatisé pour obtenir des
+            explications détaillées. Après avoir compris le raisonnement proposé
+            par l’IA, il refait les questions avec le raisonnement de l’IA.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Scénario Test-1.2 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1.2 :</h2>
+          <p class="question-text">
+            L’étudiant, bien qu’en difficulté en mathématiques, décide de faire
+            l’ensemble du devoir Moodle par lui-même. Une fois terminé, il
+            utilise un tuteur automatisé uniquement pour vérifier certaines de
+            ses réponses. Lorsqu’il constate que certaines de ses solutions sont
+            incorrectes, il analyse les explications données par le tuteur et
+            corrige ses erreurs en comprenant les concepts.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Scénario Test-1.3 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1.3 :</h2>
+          <p class="question-text">
+            Avant de commencer son devoir, l’étudiant se souvient des lacunes
+            qu’il a identifiées en classe. Il utilise le tuteur automatisé pour
+            revoir des concepts spécifiques (par exemple, les fractions ou les
+            équations de base) avant de se lancer dans le devoir sur Moodle.
+            Pendant le devoir, il applique ce qu’il a appris sans retourner vers
+            l’IA.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Scénario Test-1.4 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1.4 :</h2>
+          <p class="question-text">
+            L’étudiant commence son devoir de mathématiques en ayant l’intention
+            de travailler seul. Cependant, il se laisse tenter par le tuteur
+            automatisé après avoir eu du mal avec une question. Au fil du
+            devoir, il finit par utiliser l’IA pour répondre à toutes les
+            questions. Après réflexion, il ressent un malaise en réalisant qu’il
+            n’a rien appris et décide d’en parler à son enseignant.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Scénario Test-1.5 -->
+        <div class="scenario-box">
+          <h2>Scénario Test-1.5 :</h2>
+          <p class="question-text">
+            L’étudiant utilise un tuteur automatisé pour l’aider à résoudre
+            certaines questions complexes du devoir Moodle. En soumettant son
+            travail, il inclut une note pour l’enseignant expliquant qu’il a eu
+            recours à une aide automatisée pour certaines parties et mentionne
+            spécifiquement les concepts qu’il a eu du mal à comprendre.
+          </p>
+          <div class="button-container">
+            <button class="choice-button red" onclick="selectAnswer(this)">
+              Vous pensez qu'il y a une infraction académique
+            </button>
+            <button class="choice-button green" onclick="selectAnswer(this)">
+              Vous pensez que l'étudiant est en règle
+            </button>
+            <button class="choice-button black" onclick="selectAnswer(this)">
+              L'étudiant n'a pas commis d'infraction, mais sa façon d'utiliser
+              l'IA n'est pas bénéfique pour son apprentissage
+            </button>
+          </div>
+        </div>
+
+        <!-- Bouton final -->
+        <div class="button-container">
+          <button
+            class="choice-button black"
+            onclick="window.location.href='question1.html'"
+          >
+            Démarrer le test
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

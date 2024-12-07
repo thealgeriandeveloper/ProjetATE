@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "../frontend")));
 
 // Route principale : redirection vers question1.html
 app.get("/", (req, res) => {
-  res.redirect("/question1.html");
+  res.redirect("/index.html");
 });
 
 // Configuration CSV Writer pour sauvegarder les réponses

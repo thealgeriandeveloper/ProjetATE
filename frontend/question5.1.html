@@ -3,31 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Question 1</title>
+    <title>Question 5.1</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
-      <h1>Niveau 1</h1>
+      <h1>Niveau 5.1</h1>
       <div class="image-container">
         <img
-          src="images/question1.png"
-          alt="Illustration de la question 1"
+          src="images/question3.png"
+          alt="Illustration de la question 5.1"
           class="question-image"
         />
       </div>
-      <p class="question-text"><br>
-        Un enseignant en chimie corrige la dissertation d'un étudiant dont la
-        qualité dépasse largement celle de ses travaux précédents. Le texte est
-        rédigé avec une maîtrise linguistique avancée, contrastant avec ses
-        dissertations antérieures. De plus, l'étudiant utilise des références
-        complexes, difficiles à analyser pour un étudiant de premier cycle, et
-        introduit des concepts qui n'ont pas été abordés en classe. Soupçonneux,
-        l'enseignant invite l'étudiant à une discussion pour approfondir
-        certains points de l'essai. L'étudiant a du mal à expliquer les idées
-        présentées et admet finalement : </br>« J'ai utilisé un tuteur automatisé
-        pour améliorer mon texte. Je lui ai fourni une version complète de mon
-        rapport en lui demandant de le reformuler pour qu'il soit meilleur. »
+      <p class="question-text">
+        Toujours dans le contexte du même rapport technique, Stéphane choisit
+        cette fois-ci d’identifier lui-même les figures de style, sans l’aide
+        préalable de l’IA. <br /><br />Une fois cette étape terminée, il utilise
+        toutefois son tuteur automatisé pour élaborer la version finale de sa
+        dissertation. Pour ce faire, il fournit au TA la structure narrative
+        prévue, la liste des figures de style qu’il a relevées par lui-même,
+        ainsi que quelques grandes lignes directrices. <br /><br />Le texte
+        généré par le tuteur automatisé correspond exactement aux critères du
+        barème de correction de l’enseignant et reflète fidèlement les idées et
+        l’analyse intellectuelle initiales de Stéphane. <br /><br />L’étudiant
+        estime donc que ce résultat incarne légitimement le fruit de son propre
+        travail d’analyse, bien que l’IA ait contribué à la mise en forme
+        finale.
       </p>
       <div class="button-container">
         <button
@@ -61,10 +63,10 @@
           },
           body: JSON.stringify({
             choice: option,
-            question: "Question 1",
+            question: "Question 5.1",
           }),
         }).then(() => {
-          window.location.href = "question1.1.html"; // Redirection vers la question suivante
+          window.location.href = "question6.html"; // Redirection vers la page finale ou une autre question
         });
       }
     </script>
